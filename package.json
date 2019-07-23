@@ -1,0 +1,15 @@
+{
+  "name": "my-monorepo",
+  "description": "monorepo demonstrating build issue: https://github.com/storybookjs/storybook/issues/3346#issuecomment-513397002",
+  "version": "1.0.0",
+  "author": "busticated",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  }
+}
