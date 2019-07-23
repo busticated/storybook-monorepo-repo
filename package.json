@@ -5,9 +5,23 @@
   "author": "busticated",
   "license": "UNLICENSED",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "postinstall": "npm run bootstrap",
+    "version": "lerna exec -- npm install --ignore-scripts --package-lock-only --no-audit && git add packages/*/package-lock.json",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "clean:modules": "lerna clean --yes",
+    "dependencies:list": "npm list --depth=0 && lerna exec --no-bail -- npm list --depth=0",
+    "dependencies:outdated": "npm outdated || true && lerna exec --no-bail -- npm outdated",
+    "todo": "git grep -e 'TODO (.*)' --ignore-case --heading --break --context=2 --full-name --line-number -- :^./package.json",
+    "reinstall": "npm run clean && npm run clean:modules && rm -rf ./node_modules && npm i",
+    "release": "npm run build && lerna publish",
+    "start": "npm run storybook"
+  },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "lerna": "^3.16.2"
+  },
   "engines": {
     "node": "8.x",
     "npm": "5.x"
