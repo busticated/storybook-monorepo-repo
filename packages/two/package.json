@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "main": "dist/index.js",
+  "module": "src/index.jsx",
   "scripts": {
     "build": "babel ./src --out-dir ./dist --ignore test.jsx,stories.jsx --config-file ../../.babelrc",
     "clean": "rm -rf ./dist"
