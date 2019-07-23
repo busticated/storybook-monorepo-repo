@@ -1,0 +1,21 @@
+{
+  "name": "@my-monorepo/two",
+  "description": "react component two",
+  "version": "1.1.0",
+  "author": "busticated",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {},
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "prop-types": "^15.7.2"
+  },
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  }
+}
