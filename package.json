@@ -9,6 +9,7 @@
     "postinstall": "npm run bootstrap",
     "version": "lerna exec -- npm install --ignore-scripts --package-lock-only --no-audit && git add packages/*/package-lock.json",
     "bootstrap": "lerna bootstrap",
+    "build": "npm run clean && lerna run build",
     "clean": "lerna run clean",
     "clean:modules": "lerna clean --yes",
     "dependencies:list": "npm list --depth=0 && lerna exec --no-bail -- npm list --depth=0",

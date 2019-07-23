@@ -6,7 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "main": "dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist --ignore test.jsx,stories.jsx --config-file ../../.babelrc",
+    "clean": "rm -rf ./dist"
+  },
   "peerDependencies": {
     "react": ">=15"
   },
