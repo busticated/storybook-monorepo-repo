@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import backgrounds from '@storybook/addon-backgrounds';
+import {withBackgrounds} from '@storybook/addon-backgrounds';
 import { withKnobs, text, boolean, color, object } from '@storybook/addon-knobs/react';
-import Logo from './';
+import Two from './';
 
 storiesOf('Two', module)
 	.addDecorator(withKnobs)
 	.addDecorator(
-		backgrounds([
+		withBackgrounds([
 			{ name: 'whitesmoke', value: '#f5f5f5' },
 			{ name: 'cobal', value: '#041e41' },
 			{ name: 'emerald-dark', value: '#005822' },
@@ -23,7 +23,7 @@ storiesOf('Two', module)
 		<Two monochrome={true} />
 	))
 	.add('PLAYGROUND', () => {
-		const defaults = Logo.getDefaultProps();
+		const defaults = Two.getDefaultProps();
 		const className = text('className', defaults.className);
 		const monochrome = boolean('monochrome', defaults.monochrome);
 		const props = object('props', {

@@ -17,9 +17,5 @@
   "dependencies": {
     "create-react-class": "^15.6.3",
     "prop-types": "^15.7.2"
-  },
-  "engines": {
-    "node": "8.x",
-    "npm": "5.x"
   }
 }
