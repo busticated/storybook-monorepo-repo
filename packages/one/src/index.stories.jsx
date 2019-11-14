@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import backgrounds from '@storybook/addon-backgrounds';
+import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withKnobs, select, object } from '@storybook/addon-knobs/react';
 import One from './';
-
 
 storiesOf('One', module)
 	.addDecorator(withKnobs)
 	.addDecorator(
-		backgrounds([
+		withBackgrounds([
 			{ name: 'whitesmoke', value: '#f5f5f5' },
 			{ name: 'cobal', value: '#041e41', default: true },
 			{ name: 'emerald-dark', value: '#005822' },

@@ -20,6 +20,9 @@
     "release": "npm run build && lerna publish",
     "start": "npm run storybook"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -36,9 +39,5 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2"
-  },
-  "engines": {
-    "node": "8.x",
-    "npm": "5.x"
   }
 }
