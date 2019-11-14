@@ -24,7 +24,7 @@ storiesOf('One', module)
 		<One colorMode='fuchsia' />
 	))
 	.add('PLAYGROUND', () => {
-		const defaults = Bumper.getDefaultProps();
+		const defaults = One.getDefaultProps();
 		const options = {
 			cyan: 'cyan',
 			emerald: 'emerald',
